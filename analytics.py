@@ -214,8 +214,8 @@ def main():
             drv.get(ig_login_url)
             time.sleep(3)
             try:
-		username = "Enter Your IG Username Here"
-		password = "Enter Your IG Password Here or Implement a Password Handler."
+                username = "Enter Your IG Username Here"
+                password = "Enter Your IG Password Here or Implement a Password Handler."
                 drv.find_element_by_xpath("//*[@id=\"loginForm\"]/div/div[1]/div/label/input").send_keys(username)
                 drv.find_element_by_xpath("//*[@id=\"loginForm\"]/div/div[2]/div/label/input").send_keys(password) 
                 drv.find_element_by_xpath("//*[@id=\"loginForm\"]/div/div[3]/button").click()
