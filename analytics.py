@@ -98,16 +98,16 @@ def main():
     ROOT.update()
     ROOT.withdraw()
     d = MainDialog(ROOT)
+    
+    if ig_tag == '' or yt_tag == '' or twitter_tag == '' or fb_tag == '' or tiktok_tag == '':
+        ROOT.destroy()
+        raise SystemExit
 
     ig_tag = d.result[0].replace(' ', '')
     yt_tag = d.result[1].replace(' ', '%20')
     twitter_tag = d.result[2].replace(' ', '')
     fb_tag = d.result[3].replace(' ', '')
     tiktok_tag = d.result[4].replace(' ', '')
-
-    if ig_tag == '' or yt_tag == '' or twitter_tag == '' or fb_tag == '' or tiktok_tag == '':
-        ROOT.destroy()
-        raise SystemExit
 
     no_ig = False
     if ig_tag == "0":
