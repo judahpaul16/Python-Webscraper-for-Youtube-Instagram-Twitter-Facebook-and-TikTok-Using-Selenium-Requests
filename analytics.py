@@ -96,6 +96,7 @@ def main():
     ROOT = tk.Tk()
     center(ROOT)
     ROOT.update()
+    ROOT.withdraw()
     d = MainDialog(ROOT)
 
     ig_tag = d.result[0].replace(' ', '')
